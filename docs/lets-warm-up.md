@@ -57,3 +57,8 @@ picoCTF{p}
 - Basic hexadecimal to ASCII conversion
 - Understanding character encoding
 - Using Python for quick conversions
+
+---
+
+> “Every system has a weakness, the challenge is finding it first.”  
+> — Seplestr
