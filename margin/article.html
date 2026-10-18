@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Article — MARGIN</title>
+  <meta name="description" content="Read long-form editorial dispatches on technology, culture, and considered living.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90' font-family='serif'>M</text></svg>">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Top Masthead Meta Bar -->
+  <aside class="top-meta-bar" aria-label="Publication Metadata">
+    <div class="site-container top-meta-inner">
+      <div class="top-meta-left">
+        <span>FlagBytes &bull; Research Journal</span>
+        <span class="meta-divider">/</span>
+        <span>CTF Archive 2026</span>
+      </div>
+      <div class="top-meta-center">
+        <span>Security Notes, Vulnerability Research &amp; Binary Triage</span>
+      </div>
+      <div class="top-meta-right">
+        <span>Maintained by Seplestr</span>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Sticky Site Header with Reading Progress Bar -->
+  <header class="site-header" id="mainHeader">
+    <div class="reading-progress-container" aria-hidden="true">
+      <div class="reading-progress-bar" id="readingProgress"></div>
+    </div>
+
+    <div class="site-container header-inner">
+      <div class="site-brand">
+        <a href="index.html" class="brand-wordmark" aria-label="FlagBytes Homepage">
+          FLAGBYTES<span class="brand-period">.</span>
+        </a>
+      </div>
+
+      <nav class="primary-nav" aria-label="Primary Editorial Navigation">
+        <ul class="nav-list">
+          <li><a href="index.html" class="nav-link">Writeups</a></li>
+          <li><a href="category.html?cat=cryptography" class="nav-link">Cryptography</a></li>
+          <li><a href="category.html?cat=web-exploitation" class="nav-link">Web Exploitation</a></li>
+          <li><a href="category.html?cat=linux-internals" class="nav-link">Linux &amp; Systems</a></li>
+          <li><a href="category.html?cat=forensics" class="nav-link">Forensics</a></li>
+          <li><a href="about.html" class="nav-link">Standards</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <button class="btn-icon" data-search-trigger aria-label="Search writeups" title="Search (Press /)">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+          <span class="sr-only">Search</span>
+        </button>
+
+        <a href="#newsletterSection" class="btn-subscribe-pill">Dispatch</a>
+
+        <button class="btn-icon btn-menu-toggle" aria-label="Open Mobile Menu">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Menu -->
+  <div class="mobile-drawer-overlay" id="mobileOverlay" aria-hidden="true"></div>
+  <aside class="mobile-drawer" id="mobileDrawer">
+    <div>
+      <div class="drawer-header">
+        <span class="brand-wordmark" style="font-size: 1.5rem;">MARGIN<span class="brand-period">.</span></span>
+        <button class="btn-icon" id="closeDrawerBtn" aria-label="Close Mobile Navigation">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+      <nav>
+        <ul class="drawer-nav-list">
+          <li><a href="index.html" class="drawer-nav-link">Front Page</a></li>
+          <li><a href="category.html?cat=technology" class="drawer-nav-link">Technology</a></li>
+          <li><a href="category.html?cat=culture" class="drawer-nav-link">Culture</a></li>
+          <li><a href="category.html?cat=ideas" class="drawer-nav-link">Ideas</a></li>
+          <li><a href="category.html?cat=essays" class="drawer-nav-link">Essays</a></li>
+          <li><a href="about.html" class="drawer-nav-link">About MARGIN</a></li>
+          <li><a href="search.html" class="drawer-nav-link">Search Archives</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="drawer-footer">
+      <p style="font-size: 0.8125rem; color: var(--text-muted); line-height: 1.5;">
+        Published without advertisements or tracking scripts. Funded by readers.
+      </p>
+    </div>
+  </aside>
+
+  <!-- Article Viewport -->
+  <main class="main-content" id="mainContent">
+
+    <!-- Article Header & Title Deck -->
+    <header class="article-header">
+      <div class="site-container article-header-container">
+        <div class="article-kicker-row">
+          <a href="#" id="articleCategory" class="article-category-badge">Editorial</a>
+          <span style="color: var(--border-medium);">&bull;</span>
+          <span style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-muted);">Essay</span>
+        </div>
+
+        <h1 class="article-title" id="articleTitle">Loading Dispatch...</h1>
+        <p class="article-subtitle" id="articleSubtitle">Please wait while the editorial dispatch is retrieved.</p>
+
+        <!-- Byline & Reading Utilities -->
+        <div class="article-byline-strip">
+          <div class="article-author-info">
+            <img src="" alt="" class="author-avatar-large" id="authorAvatar">
+            <div>
+              <div class="author-name-text" id="authorName">Author</div>
+              <div class="author-role-text" id="authorRole">Contributor</div>
+            </div>
+          </div>
+
+          <div class="article-meta-badges">
+            <time id="articleDate">October 14, 2026</time>
+            <span>&bull;</span>
+            <span id="articleReadingTime">8 min read</span>
+            <span>&bull;</span>
+            <div class="reading-tools-bar">
+              <button class="tool-btn" id="fontSizeBtn" title="Adjust Font Size" aria-label="Toggle Font Size">
+                Text: Standard
+              </button>
+              <button class="tool-btn" id="copyLinkBtn" title="Copy Article Link" aria-label="Copy Article Link">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+                  <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+                </svg>
+                Copy
+              </button>
+              <button class="tool-btn" id="nativeShareBtn" title="Share Article" aria-label="Share">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="18" cy="5" r="3"></circle>
+                  <circle cx="6" cy="12" r="3"></circle>
+                  <circle cx="18" cy="19" r="3"></circle>
+                  <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line>
+                  <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line>
+                </svg>
+                Share
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Featured Cover Photo Section -->
+    <div class="article-cover-section site-container">
+      <div class="article-cover-frame">
+        <img src="" alt="" class="article-cover-img" id="articleCoverImage">
+      </div>
+      <p class="article-cover-caption" id="articleCoverCaption"></p>
+    </div>
+
+    <!-- Long-Form Reading Layout -->
+    <div class="site-container article-reading-layout">
+
+      <!-- Sticky Table of Contents (Desktop) -->
+      <aside class="article-toc-column" aria-label="Table of Contents">
+        <div class="sticky-toc-box">
+          <div class="toc-heading">Contents</div>
+          <ul class="toc-nav-list" id="tocList">
+            <!-- Dynamically populated from h2 tags -->
+          </ul>
+        </div>
+      </aside>
+
+      <!-- Main Long-Form Article Body -->
+      <article class="article-main-body-col">
+        <div class="article-body-content" id="articleBody">
+          <!-- Article HTML Content inserted here -->
+        </div>
+
+        <!-- Filed Tags -->
+        <div class="article-tags-strip" id="articleTags">
+          <!-- Populated from data.js -->
+        </div>
+
+        <!-- Author Signoff Box -->
+        <div class="author-signoff-card">
+          <img src="" alt="" class="author-signoff-avatar" id="signoffAvatar">
+          <div>
+            <h3 class="author-signoff-title" id="signoffName">Author Name</h3>
+            <p class="author-signoff-bio" id="signoffBio">Author biographical note.</p>
+          </div>
+        </div>
+
+        <!-- Adjacent Article Navigation (Previous / Next) -->
+        <nav id="adjacentArticlesNav" aria-label="Adjacent Articles Navigation"></nav>
+      </article>
+
+      <!-- Right Column for Visual Balance -->
+      <div class="article-right-spacer" aria-hidden="true"></div>
+
+    </div>
+
+    <!-- Related Stories Section -->
+    <section class="related-stories-section site-container" aria-labelledby="relatedHeading">
+      <div class="section-header-row" style="margin-top: 0; padding-top: 0;">
+        <h2 id="relatedHeading" class="section-title">
+          <span>Further Readings</span>
+          <span class="section-counter">Selected from Archives</span>
+        </h2>
+        <a href="index.html" class="section-action-link">Back to Front Page &rarr;</a>
+      </div>
+
+      <div class="related-grid" id="relatedArticlesList">
+        <!-- Rendered by article.js -->
+      </div>
+    </section>
+
+    <!-- Newsletter Dispatch Section -->
+    <section class="newsletter-strip" id="newsletterSection" aria-labelledby="newsletterHeading">
+      <div class="site-container">
+        <div class="newsletter-box">
+          <div>
+            <div class="newsletter-label">The Quarterly Dispatch</div>
+            <h2 id="newsletterHeading" class="newsletter-heading">Delivered with restraint.</h2>
+            <p class="newsletter-desc">
+              Four times a year, we assemble a carefully printed summary of our most enduring essays, interviews, and cultural annotations.
+            </p>
+          </div>
+
+          <div>
+            <form class="newsletter-form" id="articleNewsletterForm">
+              <label for="newsletterEmailInputArticle" class="sr-only">Email address for subscription</label>
+              <div class="input-row">
+                <input type="email" id="newsletterEmailInputArticle" class="newsletter-input" placeholder="reader@example.com" required autocomplete="email" />
+                <button type="submit" class="newsletter-btn">Subscribe</button>
+              </div>
+              <p class="newsletter-disclaimer">
+                We respect your inbox. Unsubscribe anytime with a single click.
+              </p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Global Footer -->
+  <footer class="site-footer">
+    <div class="site-container">
+      <div class="footer-main-grid">
+        <div class="footer-brand-col">
+          <div class="footer-wordmark">FLAGBYTES<span class="brand-period">.</span></div>
+          <p class="footer-tagline">
+            A personal technical notebook tracking CTF challenge solutions, vulnerability writeups, and low-level security concepts. Maintained by Seplestr.
+          </p>
+          <div class="footer-issn">SEC-NOTEBOOK &bull; 2026 EDITION</div>
+        </div>
+
+        <div>
+          <h3 class="footer-heading">Domains</h3>
+          <ul class="footer-links-list">
+            <li><a href="category.html?cat=cryptography" class="footer-link">Cryptography</a></li>
+            <li><a href="category.html?cat=web-exploitation" class="footer-link">Web Exploitation</a></li>
+            <li><a href="category.html?cat=linux-internals" class="footer-link">Linux &amp; Systems</a></li>
+            <li><a href="category.html?cat=forensics" class="footer-link">Forensics &amp; Traffic</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="footer-heading">Platforms</h3>
+          <ul class="footer-links-list">
+            <li><a href="search.html?q=picoctf" class="footer-link">picoCTF</a></li>
+            <li><a href="search.html?q=hackthebox" class="footer-link">Hack The Box</a></li>
+            <li><a href="search.html?q=tryhackme" class="footer-link">TryHackMe</a></li>
+            <li><a href="about.html#template" class="footer-link">Writeup Template</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="footer-heading">Resources</h3>
+          <ul class="footer-links-list">
+            <li><a href="about.html" class="footer-link">Writeup Standards</a></li>
+            <li><a href="search.html" class="footer-link">Search Archives</a></li>
+            <li><a href="privacy.html" class="footer-link">Privacy Statement</a></li>
+            <li><a href="terms.html" class="footer-link">Usage Rights</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom-bar">
+        <div>&copy; 2026 FlagBytes &bull; Seplestr. All technical writeups released for educational research.</div>
+        <div class="footer-bottom-links">
+          <a href="about.html#template">Writeup Template</a>
+          <a href="privacy.html">Privacy</a>
+          <a href="terms.html">Terms</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Search Modal -->
+  <div class="search-modal-backdrop" id="searchModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modalSearchLabel">
+    <div class="search-modal-container">
+      <div class="search-modal-input-row">
+        <label id="modalSearchLabel" for="modalSearchInput" class="sr-only">Search MARGIN articles</label>
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: var(--text-muted);">
+          <circle cx="11" cy="11" r="8"></circle>
+          <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+        </svg>
+        <input type="search" id="modalSearchInput" class="modal-search-field" placeholder="Search essays, authors, ideas..." autocomplete="off" />
+        <button class="btn-icon" id="closeSearchModalBtn" aria-label="Close search">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+      <div class="search-modal-results" id="modalSearchResults"></div>
+      <div class="search-modal-footer">
+        <span>Press <kbd style="background: var(--bg-primary); border: 1px solid var(--border-medium); padding: 1px 4px; border-radius: 2px;">ESC</kbd> to close</span>
+        <a href="search.html" style="text-decoration: underline; color: var(--accent);">Open Full Search Page &rarr;</a>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="js/main.js"></script>
+  <script type="module" src="js/article.js"></script>
+</body>
+</html>
