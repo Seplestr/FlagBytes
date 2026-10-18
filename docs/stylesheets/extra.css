@@ -1,0 +1,244 @@
+/* ==========================================================================
+   FlagBytes — Clean Security Engineering Theme
+   Minimal, high-contrast, technical aesthetic without artificial fluff.
+   ========================================================================== */
+
+:root {
+  --fb-accent: #38bdf8;         /* Clean sky/cyan accent */
+  --fb-accent-dim: rgba(56, 189, 248, 0.12);
+  --fb-accent-border: rgba(56, 189, 248, 0.28);
+  --fb-border: #1e293b;
+  --fb-card-bg: #0f172a;
+}
+
+[data-md-color-scheme="slate"] {
+  --md-default-bg-color: #0b0f17;
+  --md-default-bg-color--lighter: #111827;
+  --md-default-fg-color: #e2e8f0;
+  --md-default-fg-color--light: #94a3b8;
+  --md-primary-fg-color: #0b0f17;
+  --md-accent-fg-color: #38bdf8;
+  --md-code-bg-color: #0d131f;
+}
+
+/* Subtle Hero / Header Section */
+.hero-container {
+  padding: 1.75rem 0 1.25rem 0;
+  border-bottom: 1px solid var(--fb-border);
+  margin-bottom: 2rem;
+}
+
+.hero-title {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 1.85rem;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  margin: 0 0 0.5rem 0;
+  color: #f8fafc !important;
+}
+
+.hero-desc {
+  font-size: 1rem;
+  color: #94a3b8;
+  margin: 0 0 1.25rem 0;
+  max-width: 680px;
+  line-height: 1.6;
+}
+
+.hero-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.btn-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.8rem;
+  font-weight: 500;
+  padding: 0.35rem 0.85rem;
+  border-radius: 4px;
+  text-decoration: none !important;
+  transition: all 0.15s ease-in-out;
+}
+
+.btn-pill-primary {
+  background: var(--fb-accent-dim);
+  border: 1px solid var(--fb-accent-border);
+  color: #38bdf8 !important;
+}
+
+.btn-pill-primary:hover {
+  background: rgba(56, 189, 248, 0.2);
+  border-color: #38bdf8;
+}
+
+.btn-pill-muted {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--fb-border);
+  color: #94a3b8 !important;
+}
+
+.btn-pill-muted:hover {
+  border-color: #475569;
+  color: #e2e8f0 !important;
+}
+
+/* CTF Metadata Bar (Clean & Professional) */
+.meta-grid {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 0.75rem 1rem;
+  background: var(--md-code-bg-color);
+  border: 1px solid var(--fb-border);
+  border-radius: 6px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.82rem;
+  margin: 1.25rem 0 1.75rem 0;
+}
+
+.meta-field {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  color: #cbd5e1;
+}
+
+.meta-field-label {
+  color: #64748b;
+  font-weight: 500;
+}
+
+/* Difficulty Badges */
+.badge {
+  display: inline-block;
+  padding: 0.12rem 0.45rem;
+  border-radius: 3px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.badge-easy {
+  background: rgba(34, 197, 94, 0.1);
+  color: #4ade80;
+  border: 1px solid rgba(34, 197, 94, 0.25);
+}
+
+.badge-medium {
+  background: rgba(234, 179, 8, 0.1);
+  color: #facc15;
+  border: 1px solid rgba(234, 179, 8, 0.25);
+}
+
+.badge-hard {
+  background: rgba(239, 68, 68, 0.1);
+  color: #f87171;
+  border: 1px solid rgba(239, 68, 68, 0.25);
+}
+
+/* Minimalist Flag Box */
+.flag-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  background: #06090e;
+  border: 1px solid #1e293b;
+  border-left: 3px solid #38bdf8;
+  border-radius: 4px;
+  padding: 0.75rem 1rem;
+  margin: 1.25rem 0;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.flag-box-title {
+  font-size: 0.75rem;
+  color: #64748b;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.2rem;
+}
+
+.flag-val {
+  font-size: 0.95rem;
+  color: #38bdf8;
+  filter: blur(4px);
+  cursor: pointer;
+  transition: filter 0.2s ease;
+  user-select: none;
+}
+
+.flag-val:hover,
+.flag-val:focus,
+.flag-val:active {
+  filter: blur(0);
+  user-select: all;
+}
+
+/* Clean Cards Grid */
+.grid-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+
+.card-item {
+  background: var(--md-code-bg-color);
+  border: 1px solid var(--fb-border);
+  border-radius: 6px;
+  padding: 1.15rem;
+  transition: border-color 0.15s ease;
+}
+
+.card-item:hover {
+  border-color: #334155;
+}
+
+.card-item h3 {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.95rem;
+  margin: 0 0 0.4rem 0;
+  color: #f1f5f9;
+}
+
+.card-item p {
+  font-size: 0.85rem;
+  color: #94a3b8;
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* Subtle clean tag pills */
+.md-tag {
+  background: rgba(255, 255, 255, 0.04) !important;
+  color: #94a3b8 !important;
+  border: 1px solid #1e293b !important;
+  font-family: 'JetBrains Mono', monospace !important;
+  font-size: 0.72rem !important;
+  border-radius: 3px !important;
+}
+
+/* Tables */
+.md-typeset table:not([class]) {
+  border: 1px solid var(--fb-border);
+  border-radius: 6px;
+  font-size: 0.85rem;
+}
+
+.md-typeset table:not([class]) th {
+  background-color: #0e1522;
+  color: #94a3b8;
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  letter-spacing: 0.04em;
+}

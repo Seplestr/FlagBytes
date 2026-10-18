@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Search Dispatches — MARGIN</title>
+  <meta name="description" content="Search across the complete MARGIN archive of essays, analyses, and cultural dispatches.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90' font-family='serif'>M</text></svg>">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Top Masthead Meta Bar -->
+  <aside class="top-meta-bar" aria-label="Publication Metadata">
+    <div class="site-container top-meta-inner">
+      <div class="top-meta-left">
+        <span>Volume IV &bull; Issue 12</span>
+        <span class="meta-divider">/</span>
+        <span>Autumn 2026</span>
+      </div>
+      <div class="top-meta-center">
+        <span>An Independent Journal of Technology, Culture, and Craft</span>
+      </div>
+      <div class="top-meta-right">
+        <span>Published from London & New York</span>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Sticky Site Header -->
+  <header class="site-header" id="mainHeader">
+    <div class="site-container header-inner">
+      <div class="site-brand">
+        <a href="index.html" class="brand-wordmark" aria-label="FlagBytes Homepage">
+          FLAGBYTES<span class="brand-period">.</span>
+        </a>
+      </div>
+
+      <nav class="primary-nav" aria-label="Primary Editorial Navigation">
+        <ul class="nav-list">
+          <li><a href="index.html" class="nav-link">Writeups</a></li>
+          <li><a href="category.html?cat=cryptography" class="nav-link">Cryptography</a></li>
+          <li><a href="category.html?cat=web-exploitation" class="nav-link">Web Exploitation</a></li>
+          <li><a href="category.html?cat=linux-internals" class="nav-link">Linux &amp; Systems</a></li>
+          <li><a href="category.html?cat=forensics" class="nav-link">Forensics</a></li>
+          <li><a href="about.html" class="nav-link">Standards</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <a href="about.html#template" class="btn-subscribe-pill">Template</a>
+
+        <button class="btn-icon btn-menu-toggle" aria-label="Open Mobile Menu">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Menu -->
+  <div class="mobile-drawer-overlay" id="mobileOverlay" aria-hidden="true"></div>
+  <aside class="mobile-drawer" id="mobileDrawer">
+    <div>
+      <div class="drawer-header">
+        <span class="brand-wordmark" style="font-size: 1.5rem;">FLAGBYTES<span class="brand-period">.</span></span>
+        <button class="btn-icon" id="closeDrawerBtn" aria-label="Close Mobile Navigation">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+      <nav>
+        <ul class="drawer-nav-list">
+          <li><a href="index.html" class="drawer-nav-link">All Writeups</a></li>
+          <li><a href="category.html?cat=cryptography" class="drawer-nav-link">Cryptography &amp; Encodings</a></li>
+          <li><a href="category.html?cat=web-exploitation" class="drawer-nav-link">Web Exploitation</a></li>
+          <li><a href="category.html?cat=linux-internals" class="drawer-nav-link">Linux &amp; Systems</a></li>
+          <li><a href="category.html?cat=forensics" class="drawer-nav-link">Forensics &amp; Traffic</a></li>
+          <li><a href="about.html" class="drawer-nav-link">Writeup Standards</a></li>
+          <li><a href="search.html" class="drawer-nav-link">Search Challenges</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="drawer-footer">
+      <p style="font-size: 0.8125rem; color: var(--text-muted); line-height: 1.5;">
+        A personal technical notebook tracking CTF challenge solutions and vulnerability writeups. Maintained by Seplestr.
+      </p>
+    </div>
+  </aside>
+
+  <!-- Main Search Container -->
+  <main class="main-content" id="mainContent">
+
+    <section class="search-page-hero">
+      <div class="site-container">
+        <div class="story-meta-pill">Challenge Index</div>
+        <h1 class="category-main-title" style="margin-bottom: 0.5rem;">Search Challenge Writeups</h1>
+        <p style="font-size: 1.05rem; color: var(--text-secondary); max-width: 60ch;">
+          Query across challenge walkthroughs, tools, CVE vectors, and research notes.
+        </p>
+
+        <div class="search-page-input-wrap">
+          <label for="searchPageInput" class="sr-only">Search archive</label>
+          <input type="search" id="searchPageInput" class="search-page-input" placeholder="Search by challenge name, platform, tool (e.g., CyberChef, Wireshark, SSTI)..." autocomplete="off">
+        </div>
+
+        <!-- Filter Tags -->
+        <div style="display: flex; gap: 0.75rem; margin-top: 1.75rem; flex-wrap: wrap; align-items: center;">
+          <span style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-muted);">Filter by Domain:</span>
+          <button class="tool-btn is-active" data-cat-filter="all">All</button>
+          <button class="tool-btn" data-cat-filter="cryptography">Cryptography</button>
+          <button class="tool-btn" data-cat-filter="web-exploitation">Web Exploitation</button>
+          <button class="tool-btn" data-cat-filter="linux-internals">Linux &amp; Systems</button>
+          <button class="tool-btn" data-cat-filter="forensics">Forensics</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Search Results Section -->
+    <section class="site-container" style="padding: 2.5rem 0 5rem;">
+      <div style="padding-bottom: 1rem; border-bottom: 1px solid var(--border-dark); margin-bottom: 1.5rem; display: flex; justify-content: space-between; align-items: baseline;">
+        <span id="searchResultsCount" style="font-size: 0.875rem; font-weight: 500; color: var(--text-primary);">0 Dispatches found</span>
+        <span style="font-size: 0.75rem; color: var(--text-muted);">Instant index matching</span>
+      </div>
+
+      <div id="searchResultsList" class="stories-feed-layout">
+        <!-- Rendered by search.js -->
+      </div>
+    </section>
+
+    <!-- Newsletter Dispatch Section -->
+    <section class="newsletter-strip" id="newsletterSection" aria-labelledby="newsletterHeading">
+      <div class="site-container">
+        <div class="newsletter-box">
+          <div>
+            <div class="newsletter-label">The Quarterly Dispatch</div>
+            <h2 id="newsletterHeading" class="newsletter-heading">Delivered with restraint.</h2>
+            <p class="newsletter-desc">
+              Four times a year, we assemble a carefully printed summary of our most enduring essays, interviews, and cultural annotations.
+            </p>
+          </div>
+
+          <div>
+            <form class="newsletter-form" id="searchNewsletterForm">
+              <label for="newsletterEmailInputSearch" class="sr-only">Email address for subscription</label>
+              <div class="input-row">
+                <input type="email" id="newsletterEmailInputSearch" class="newsletter-input" placeholder="reader@example.com" required autocomplete="email" />
+                <button type="submit" class="newsletter-btn">Subscribe</button>
+              </div>
+              <p class="newsletter-disclaimer">
+                We respect your inbox. Unsubscribe anytime with a single click.
+              </p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Global Footer -->
+  <footer class="site-footer">
+    <div class="site-container">
+      <div class="footer-main-grid">
+        <div class="footer-brand-col">
+          <div class="footer-wordmark">MARGIN<span class="brand-period">.</span></div>
+          <p class="footer-tagline">
+            An independent editorial publication dedicated to critical inquiries into digital culture, thoughtful typography, and considered living.
+          </p>
+          <div class="footer-issn">ISSN 2984-7128 &bull; Vol. IV</div>
+        </div>
+
+        <div>
+          <h3 class="footer-heading">Departments</h3>
+          <ul class="footer-links-list">
+            <li><a href="category.html?cat=technology" class="footer-link">Technology</a></li>
+            <li><a href="category.html?cat=culture" class="footer-link">Culture</a></li>
+            <li><a href="category.html?cat=ideas" class="footer-link">Ideas</a></li>
+            <li><a href="category.html?cat=essays" class="footer-link">Essays</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="footer-heading">Publication</h3>
+          <ul class="footer-links-list">
+            <li><a href="about.html" class="footer-link">About MARGIN</a></li>
+            <li><a href="about.html#masthead" class="footer-link">Masthead</a></li>
+            <li><a href="about.html#principles" class="footer-link">Editorial Values</a></li>
+            <li><a href="about.html#submissions" class="footer-link">Submissions</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="footer-heading">Colophon</h3>
+          <ul class="footer-links-list">
+            <li><a href="search.html" class="footer-link">Search Archives</a></li>
+            <li><a href="privacy.html" class="footer-link">Privacy Statement</a></li>
+            <li><a href="terms.html" class="footer-link">Terms & Rights</a></li>
+            <li><a href="404.html" class="footer-link">Sample 404</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom-bar">
+        <div>&copy; 2026 MARGIN Editorial. All rights reserved. Built with editorial restraint.</div>
+        <div class="footer-bottom-links">
+          <a href="privacy.html">Privacy</a>
+          <a href="terms.html">Terms</a>
+          <a href="about.html#colophon">Typography: Newsreader & Inter</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module" src="js/main.js"></script>
+  <script type="module" src="js/search.js"></script>
+</body>
+</html>

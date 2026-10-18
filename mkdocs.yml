@@ -1,13 +1,27 @@
 site_name: FlagBytes
-site_description: Cybersecurity Notes and CTF Writeups
+site_description: Cybersecurity Notes, CTF Writeups, and Security Research
+site_author: Seplestr
+repo_name: Seplestr/FlagBytes
+repo_url: https://github.com/Seplestr/FlagBytes
 
 theme:
   name: material
-
+  language: en
   palette:
+    # Slate (Cyber Dark Mode - Default)
     - scheme: slate
       primary: black
-      accent: green
+      accent: teal
+      toggle:
+        icon: material/weather-night
+        name: Switch to light mode
+    # Light Mode
+    - scheme: default
+      primary: black
+      accent: teal
+      toggle:
+        icon: material/white-balance-sunny
+        name: Switch to dark mode
 
   font:
     text: Inter
@@ -15,23 +29,56 @@ theme:
 
   features:
     - navigation.instant
+    - navigation.tracking
+    - navigation.tabs
+    - navigation.tabs.sticky
     - navigation.sections
     - navigation.expand
+    - navigation.path
     - navigation.top
     - search.highlight
+    - search.share
+    - search.suggest
     - content.code.copy
+    - content.code.annotate
+    - content.tabs.link
+    - content.tooltips
 
 plugins:
   - search
+  - tags
+
+extra_css:
+  - stylesheets/extra.css
 
 markdown_extensions:
   - admonition
+  - attr_list
+  - md_in_html
   - pymdownx.details
-  - pymdownx.superfences
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
 
 nav:
   - Home: index.md
-
-  - CTFs:
+  - CTF Writeups:
       - Overview: ctf.md
-      - Lets Warm Up: lets-warm-up.md
+      - picoCTF:
+          - Lets Warm Up: lets-warm-up.md
+      - Writeup Template: template.md

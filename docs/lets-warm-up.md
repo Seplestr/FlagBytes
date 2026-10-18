@@ -1,64 +1,90 @@
-# CTF #1 - Lets Warm Up
+---
+title: "Lets Warm Up - picoCTF"
+description: "Walkthrough for picoCTF Lets Warm Up challenge covering hexadecimal to ASCII conversion."
+tags:
+  - picoctf
+  - cryptography
+  - general-skills
+---
+
+# picoCTF — Lets Warm Up
+
+<div class="meta-grid">
+  <div class="meta-field"><span class="meta-field-label">Platform:</span> picoCTF</div>
+  <div class="meta-field"><span class="meta-field-label">Category:</span> General Skills</div>
+  <div class="meta-field"><span class="meta-field-label">Points:</span> 50</div>
+  <div class="meta-field"><span class="meta-field-label">Difficulty:</span> <span class="badge badge-easy">Easy</span></div>
+</div>
 
 ## Problem Statement
 
-> If I told you a word started with 0x70 in hexadecimal, what would it start with in ASCII?
+> If I told you a word started with `0x70` in hexadecimal, what would it start with in ASCII?
+
+??? tip "Hint"
+    Submit your answer wrapped in the competition's standard flag format: `picoCTF{<character>}`.
 
 ---
 
-## Initial Thoughts
+## Analysis
 
-At first glance, the challenge immediately looked related to hexadecimal and ASCII conversion.
+The input is given in hexadecimal notation (`0x70`):
 
-Since `0x70` is a hexadecimal value, I assumed the task was simply to convert it into its ASCII equivalent.
+* Base 16: `0x70`
+* Base 10: $(7 \times 16^1) + (0 \times 16^0) = 112$
 
----
-
-## Approach
-
-I decided to check what character `0x70` represents in ASCII.
-
-This can be done using:
-
-- an online ASCII table
-- Python
-- Linux terminal commands
+In standard ASCII encoding, decimal `112` maps to the lowercase character `p`.
 
 ---
 
 ## Solution
 
-Using Python:
+=== "Python"
 
-```python
-chr(0x70)
-```
+    ```python
+    >>> chr(0x70)
+    'p'
+    ```
 
-Output:
+    One-liner to print the full flag:
 
-```text
-p
-```
+    ```bash
+    python3 -c "print(f'picoCTF{{{chr(0x70)}}}')"
+    ```
 
-The hexadecimal value `0x70` corresponds to the character `p` in ASCII.
+=== "Bash"
+
+    Using shell builtins:
+
+    ```bash
+    printf "\x70\n"
+    ```
+
+    Or via `xxd`:
+
+    ```bash
+    echo "70" | xxd -r -p; echo ""
+    ```
+
+=== "CyberChef"
+
+    1. Load recipe: **From Hex** (delimiter: Auto).
+    2. Input: `0x70`.
+    3. Output: `p`.
 
 ---
 
 ## Flag
 
-```text
-picoCTF{p}
-```
+<div class="flag-box">
+  <div>
+    <div class="flag-box-title">Flag (Click to reveal)</div>
+    <span class="flag-val">picoCTF{p}</span>
+  </div>
+</div>
 
 ---
 
-## What I Learned
+## Notes
 
-- Basic hexadecimal to ASCII conversion
-- Understanding character encoding
-- Using Python for quick conversions
-
----
-
-> “Every system has a weakness, the challenge is finding it first.”  
-> — Seplestr
+* `0x` denotes hexadecimal literals across C, Python, and shell environments.
+* For quick single-byte conversions in the terminal, `printf "\x<hex>\n"` avoids starting an interpreter.
